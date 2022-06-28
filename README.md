@@ -28,4 +28,6 @@ The request should come in the following formats:
 }
 ```
 
+The data in this project is not persistent since this configuration doesn't reflect a real world scenario.
+
 Use `npm start` to run the project in your machine.

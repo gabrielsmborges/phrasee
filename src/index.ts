@@ -1,8 +1,10 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { Notification, User, CreateBody } from "./util/types";
-const notifications: Notification[] = require('./notifications.json')
+import untypedNotifications from './notifications.json';
 import { v4 as uuid } from 'uuid';
+
+const notifications = untypedNotifications as Notification[];
 
 const users = notifications.reduce((acc: { [key: string]: User }, notification: Notification) => {
     const { user } = notification;
